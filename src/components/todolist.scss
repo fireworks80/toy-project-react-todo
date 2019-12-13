@@ -1,0 +1,48 @@
+.todo-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  &-item {
+    // outline: 1px dashed red;
+    position: relative;
+    padding-right: 10%;
+    
+    &:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    &:nth-child(n + 2) {
+      border-top: 1px solid #dee2e6;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    padding: 1em 0.5em;
+
+    span {
+      margin-left: 1.5em;
+    }
+
+    &.checked svg {
+      color: #22b8cf;
+    }
+
+    &.checked .text {
+      color: #adb5bd;
+      text-decoration: line-through;
+    }
+  }
+
+  .remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
